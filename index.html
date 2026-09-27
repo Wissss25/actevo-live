@@ -3,16 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Retour app</title>
+  <title>Retour ACTEVO</title>
+  <style>
+    body{font-family:Arial;background:#050A1E;color:#fff;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0;text-align:center}
+    .box{padding:30px}
+    h2{letter-spacing:6px;margin:14px 0 4px}
+    .btn{display:inline-block;margin-top:22px;padding:16px 36px;background:linear-gradient(135deg,#00E5FF,#7B61FF);color:#fff;font-weight:bold;font-size:17px;border-radius:14px;text-decoration:none;letter-spacing:1px}
+    p{color:#8A93B2;font-size:13px}
+  </style>
 </head>
 <body>
-  <p>🔄 Retour lel app...</p>
+  <div class="box">
+    <div style="font-size:48px">🌌</div>
+    <h2>ACTEVO</h2>
+    <a class="btn" id="open">📲 RETOUR À L'APP</a>
+    <p>Ken el app ma t7allatch automatiquement → <b>ezreb 3al bouton!</b></p>
+  </div>
   <script>
+    var target = 'suplaapp://callback' + location.search;
+    document.getElementById('open').href = target;
     if (location.search.length > 0) {
-      location.replace('suplaapp://callback' + location.search);
-    } else {
-      document.body.innerHTML =
-        '<p>✅ Hedhi el page mta3 redirection — tetkhaddem automatiquement ki tconnecti mel app.</p>';
+      location.replace(target);   // essai automatique
     }
   </script>
 </body>
