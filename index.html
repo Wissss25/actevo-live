@@ -16,14 +16,16 @@
   <div class="box">
     <div style="font-size:48px">🌌</div>
     <h2>ACTEVO</h2>
-    <a class="btn" id="open">📲 RETOUR À L'APP</a>
-    <p>Ken el app ma t7allatch automatiquement → <b>ezreb 3al bouton!</b></p>
+    <a class="btn" id="open">📲 OUVRIR ACTEVO</a>
+    <p>Ezreb 3al bouton bech trja3 lel app!</p>
   </div>
   <script>
-    var target = 'suplaapp://callback' + location.search;
-    document.getElementById('open').href = target;
-    if (location.search.length > 0) {
-      location.replace(target);   // essai automatique
+    var q = location.search;
+    // ⭐ intent:// → Chrome y7all el app DIRECT b' el package — BULLETPROOF!
+    var url = 'intent://callback' + q + '#Intent;scheme=suplaapp;package=com.example.actevo;end';
+    document.getElementById('open').href = url;
+    if (q.length > 0) {
+      location.replace(url);
     }
   </script>
 </body>
