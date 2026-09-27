@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retour app</title>
+</head>
+<body>
+  <p>🔄 Retour lel app...</p>
+  <script>
+    if (location.search.length > 0) {
+      location.replace('suplaapp://callback' + location.search);
+    } else {
+      document.body.innerHTML =
+        '<p>✅ Hedhi el page mta3 redirection — tetkhaddem automatiquement ki tconnecti mel app.</p>';
+    }
+  </script>
+</body>
+</html>
